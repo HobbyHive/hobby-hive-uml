@@ -5,9 +5,9 @@ participant "Event" as E
 actor "Guest" as G
 participant "Chat" as C
 
-H -> E : 1. Create Event
-G -> E : 2. Participate Event
-H -> E : 3. End Event
-E -> C : 4. Create Chat
+H ->> E : 1. Create Event
+G ->> E : 2. Participate Event
+H ->> E : 3. End Event
+E ->> C : 4. Create Chat
 
 @enduml
