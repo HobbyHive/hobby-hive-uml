@@ -6,7 +6,7 @@ PlantUML은 텍스트 기반의 UML 다이어그램 생성 도구입니다. 다�
 
 PlantUML을 사용하려면 다음 단계를 따르면 됩니다.
 
-PlantUML 다운로드: PlantUML은 Java 기반으로 작동하므로 Java를 먼저 설치해야 합니다. 그리고 PlantUML 공식 사이트 (https://plantuml.com/ko/download)에서 다운로드할 수 있습니다.
+PlantUML 다운로드: PlantUML은 Java 기반으로 작동하므로 Java를 먼저 설치해야 합니다. 그리고 PlantUML 공식 사이트 < https://plantuml.com/ko/download >에서 다운로드할 수 있습니다.
 
 PlantUML 코드 작성: PlantUML은 다양한 UML 다이어그램을 지원합니다. 예를 들어, 클래스 다이어그램을 생성하려면 다음과 같은 PlantUML 코드를 작성할 수 있습니다.
 
@@ -20,7 +20,7 @@ class Car {
 }
 @enduml
 ```
-
+다양한 문법 < https://plantuml.com/ko/ >
 
 # Visual Studio Code에서 PlantUML을 실행하기 위해서는 다음과 같은 단계를 따르면 됩니다.
 
