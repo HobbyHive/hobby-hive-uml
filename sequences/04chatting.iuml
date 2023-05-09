@@ -1,0 +1,14 @@
+@startuml seqeunce
+
+actor "User 1" as U1
+participant "Chat" as C
+database "Firebase" as F
+actor "User 2" as U2
+
+U1 -> C: Input message
+C -> F: Add message data
+F -> C: Recognize changed message
+C -> U2: Display message
+C -> U1: Display message
+
+@enduml
