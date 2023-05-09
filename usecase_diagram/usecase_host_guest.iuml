@@ -1,0 +1,81 @@
+' @startuml
+' (First usecase)
+' (Another usecase) as (UC2)
+' usecase UC3
+' usecase (Last\nusecase) as UC4
+' @enduml
+
+@startuml
+left to right direction
+
+Actor (host) as "Host"
+Actor (guest) as "Guest"
+Actor (database) as "DataBase"
+
+package "System" {
+    usecase "Creating an event" as UC1
+    usecase "Editing a created event" as UC2
+    usecase "Deleting a created event" as UC3
+    usecase "Setting the privacy setting of a created event" as UC4
+    usecase "Accept/reject the user into a created event" as UC5
+    usecase "Remove the user from a created event" as UC6
+    usecase "Remind the user about a created event" as UC7
+    usecase "Finishing a created event, marking as complete" as UC8
+    usecase "Searching for possible events" as UC9
+    usecase "Filtering the search using distance/tags etc." as UC10
+    usecase "Join/asking to join an event" as UC11
+    usecase "Leave an event" as UC12
+    usecase "Profile customization (picture, hobby tags, small tagline, etc)" as UC13
+    usecase "Chat with other people in a created event" as UC14
+    usecase "Give ratings to events and people (that they joined)" as UC15
+    usecase "Invite other users into events" as UC16
+
+    usecase "Validating events" as UC17
+}
+
+host -- UC1
+host -- UC2
+host -- UC3
+host -- UC4
+host -- UC5
+host -- UC6
+host -- UC7
+host -- UC8
+
+guest -- UC9
+guest -- UC10
+guest -- UC11
+guest -- UC12
+
+guest -- UC13
+host -- UC13
+guest -- UC14
+host -- UC14
+guest -- UC15
+host -- UC15
+guest -- UC16
+host -- UC16
+
+UC1 ..> UC17 : include
+UC2 ..> UC17 : include
+UC3 ..> UC17 : include
+UC4 ..> UC17 : include
+UC5 ..> UC17 : include
+UC6 ..> UC17 : include
+UC7 ..> UC17 : include
+UC8 ..> UC17 : include
+UC9 ..> UC17 : include
+UC10 ..> UC17 : include
+UC11 ..> UC17 : include
+UC12 ..> UC17 : include
+UC13 ..> UC17 : include
+UC14 ..> UC17 : include
+UC15 ..> UC17 : include
+UC16 ..> UC17 : include
+
+
+UC17 -- database
+
+
+
+@enduml

@@ -1,0 +1,13 @@
+@startuml seqeunce06
+
+actor "User 1" as U1
+participant "System" as S
+database "Firebase" as F
+
+actor "User 2" as U2
+
+S <- F : 1. Send notification about event
+S -> U1: 2. Send notification about event
+S -> U2: 2. Send notification about event
+
+@enduml
