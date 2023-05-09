@@ -10,7 +10,7 @@ PlantUML 다운로드: PlantUML은 Java 기반으로 작동하므로 Java를 먼
 
 PlantUML 코드 작성: PlantUML은 다양한 UML 다이어그램을 지원합니다. 예를 들어, 클래스 다이어그램을 생성하려면 다음과 같은 PlantUML 코드를 작성할 수 있습니다.
 
-'''
+```
 @startuml
 class Car {
   - make: string
@@ -19,7 +19,7 @@ class Car {
   + drive(): void
 }
 @enduml
-'''
+```
 
 
 # Visual Studio Code에서 PlantUML을 실행하기 위해서는 다음과 같은 단계를 따르면 됩니다.
