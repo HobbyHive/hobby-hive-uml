@@ -1,0 +1,111 @@
+@startuml class
+
+class UserProvider {
+    User user
+
+    signIn()
+    signUp()
+    signOut()
+    getUser()
+    updateProfile()
+    updatePassword()
+}
+
+UserProvider <-- User
+
+class User {
+    int id
+    String name
+    String email
+    int age
+    Url profileImage
+    String biographie
+    Interest interests
+    float hostRating
+    float participantRating
+
+    fromFirestore()
+    toFirestore()
+}
+
+User <-- Interest
+
+class Interest {
+    int id
+    String name
+
+    fromFirestore()
+    toFirestore()
+}
+
+class Request {
+    int id
+    int eventId
+    int participantId
+
+    fromFirestore()
+    toFirestore()
+}
+
+Request <-- Event
+Request <-- User
+
+class Event {
+    int id
+    String eventName
+    int hostId
+    List<int> participantsId
+    Image eventImage
+    String address
+    float latitude
+    float longitude
+    int interestId
+    DateTime day
+    String description
+    bool isPrivate
+
+    fromFirestore()
+    toFirestore()
+}
+
+Event <-- User
+
+class Chatroom {
+    int id
+    String roomName
+    Image roomPhoto
+    List<int> messages
+    List<int> users
+
+    fromFirestore()
+    toFirestore()
+}
+
+Chatroom <-- User
+Chatroom <-- Message
+
+class Message {
+    int id
+    int senderId
+    List<int> content
+    DateTime sentTime
+
+    fromFirestore()
+    toFirestore()
+}
+
+Message <-- User
+
+class Content {
+    int id
+    String text
+    Image image
+    Url video
+
+    fromFirestore()
+    toFirestore()
+}
+
+Content --> Message
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml seqeunce
+
+actor "Student" as S
+participant "System" as Sys
+database "Database" as D
+
+S -> Sys: 1. Login
+Sys -> D: 2. Check Login
+D --> Sys: 3. Return Login Status
+Sys --> S: 4. Return Login Status
+
+@enduml
