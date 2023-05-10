@@ -1,0 +1,13 @@
+@startuml seqeunce02
+
+participant "SignInPage" as SignInPage
+participant "MainPage" as MainPage
+database "Firebase" as Firebase
+
+SignInPage -> SignInPage: 1. validate input
+SignInPage -> Firebase: 2. validate user data
+Firebase --> SignInPage:
+SignInPage ->> MainPage:
+
+
+@enduml

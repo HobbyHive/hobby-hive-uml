@@ -1,0 +1,16 @@
+@startuml seqeunce05
+
+participant "ChatPage of A user" as ch1
+participant "ChatPage of B user" as ch2
+database "Firebase" as F
+
+ch1 -> ch1: 1. input message
+ch1 ->> F: 2. Store message
+F ->> ch1: 3. give notification
+F ->> ch2: 3. give notification
+ch1 -> F: 4. request chatting data
+ch1 <-- F: 
+ch2 ->F: 5. request chatting data
+ch2 <-- F:
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml seqeunce01
+
+participant "SignInPage" as SignInPage
+participant "SignUpPage" as SignUpPage
+participant "MyProfilePage" as MyProfilePage
+participant "MainPage" as MainPage
+database "Firebase" as Firebase
+
+SignInPage ->> SignUpPage: 1. click register button
+SignUpPage -> SignUpPage : 2. validate input
+SignUpPage -> Firebase: 3. store user data
+Firebase --> SignUpPage:
+SignUpPage ->> MyProfilePage:
+MyProfilePage -> MyProfilePage: 4. fill out profile
+MyProfilePage ->> MainPage:
+
+
+@enduml
